@@ -9,8 +9,18 @@ import 'package:shopping/utils/logging/logger.dart';
 
 
 class AdminHome extends StatelessWidget {
-  const AdminHome({super.key});
+  AdminHome({super.key});
 
+  final List<String> _navigationListText = [
+    TTexts.dashboard,
+    TTexts.requests,
+    TTexts.accounts,
+  ];
+  final List<Icon> _navigationListIcons = [
+    Icon(Icons.dashboard_outlined, color: TColors.borderPrimary,),
+    Icon(Icons.request_page_outlined, color: TColors.borderPrimary,),
+    Icon(Icons.account_circle_outlined, color: TColors.borderPrimary,),
+  ];
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(AdminHomeController());
@@ -29,12 +39,12 @@ class AdminHome extends StatelessWidget {
               Expanded(
                 child: Material(
                   color: Colors.transparent,
-                  child: ListView.builder(itemBuilder: (context, index) {
-                    return TNavigationListTile(leading:  Icon(Icons.dashboard_outlined, color: TColors.borderPrimary,), text: TTexts.dashboard,
-                      index: index, controller: controller,
+                  child: ListView.builder(itemBuilder: (context, idx) {
+                    return TNavigationListTile(leading:  _navigationListIcons[idx], text: _navigationListText[idx],
+                      index: idx, controller: controller,
                       );
                   },
-                  itemCount: 3,)
+                  itemCount: _navigationListText.length,)
                 ),
               )
             ]),),),
@@ -65,7 +75,7 @@ class TNavigationListTile extends StatelessWidget {
         title: Text(text, style: Get.textTheme.titleSmall!.copyWith(color: TColors.grey),),
         hoverColor: TColors.primary.withOpacity(0.02),
         focusColor: TColors.primary.withOpacity(0.05),
-        selectedColor: TColors.primary.withOpacity(0.5),
+        selectedTileColor: TColors.primary.withOpacity(0.05),
         onTap: (){ controller.activeScreenIndex.value = index;
         TLoggerHelper.debug(controller.activeScreenIndex.value.toString());},
         selected: controller.activeScreenIndex.value == index,

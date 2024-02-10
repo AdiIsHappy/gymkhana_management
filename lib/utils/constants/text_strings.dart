@@ -11,6 +11,8 @@ class TTexts {
   static const String tContinue = "Continue";
 
   static const String dashboard = 'Dashboard';
+  static const String requests = 'Requests';
+  static const String accounts = 'Accounts';
 
 
   // -- OnBoarding Texts
