@@ -167,8 +167,6 @@ class MyForm extends StatelessWidget {
                     ),
                   ),
                 ),
-                Row(
-              children: [
                 Expanded(
                   child: TextFormField(
                     decoration: InputDecoration(
@@ -176,9 +174,6 @@ class MyForm extends StatelessWidget {
                     ),
                   ),
                 ),
-              ],
-            ),
-            
               ],
             ),
           ],
