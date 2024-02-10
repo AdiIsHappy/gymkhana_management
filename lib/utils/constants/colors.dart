@@ -45,6 +45,14 @@ class TColors {
   static const Color lightGrey = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);
 
+  // Stats Color
+  static const Color one = Color(0xFF0E92F3);
+  static const Color two = Color.fromARGB(255, 255, 0, 0);
+  static const Color three = Color.fromARGB(255, 21, 217, 231);
+  static const Color four = Color.fromARGB(255, 226, 237, 14);
+  static const Color five = Color(0xFF272727);
+
+
 }
 
 
