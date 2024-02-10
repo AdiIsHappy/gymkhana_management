@@ -2,6 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shopping/common/widget/chart.dart';
+import 'package:shopping/request/form/form.dart';
 import 'package:shopping/utils/constants/colors.dart';
 import 'package:shopping/utils/constants/image_strings.dart';
 import 'package:shopping/utils/constants/sizes.dart';
@@ -95,7 +96,13 @@ class Budget extends StatelessWidget {
                     height: TSizes.xs,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      // Navigate to the form page when the button is pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MyForm()),
+                      );
+                    },
                     child: Text("View in sheet"),
                   )
                 ],
