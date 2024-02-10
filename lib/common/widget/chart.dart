@@ -2,6 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping/utils/constants/colors.dart';
 
+
 class Chart extends StatelessWidget {
   const Chart({
     super.key,
@@ -29,7 +30,9 @@ class Chart extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .headlineMedium!
-                    .copyWith(color: Colors.white, fontWeight: FontWeight.w600),
+                    .copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600),
               ),
               Text("of 50K")
             ],
